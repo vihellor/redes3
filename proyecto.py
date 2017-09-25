@@ -1,5 +1,4 @@
 import time
-import rrdtool
 from getSNMP import consultaSNMP
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
@@ -10,25 +9,22 @@ total_input_traffic = 0
 total_output_traffic = 0
 total_system_time = 0
 
-
 style.use('fivethirtyeight')
-fig = plt.figure()
+fig = plt.figure('name of variable')
 ax1 = fig.add_subplot(1,1,1)
 
 def animate(i):
     total_input_traffic = int(
-        consultaSNMP('comunSNMP','localhost',
+        consultaSNMP('SNMPwindows','localhost',
                      '1.3.6.1.2.1.2.2.1.10.3'))
     total_output_traffic = int(
-        consultaSNMP('comunSNMP','localhost',
+        consultaSNMP('SNMPwindows','localhost',
                      '1.3.6.1.2.1.2.2.1.16.3'))
-    total_system_time = consultaSNMP('comunSNMP','localhost','1.3.6.1.2.1.1.2.0')
+    total_system_time = consultaSNMP('SNMPwindows','localhost','1.3.6.1.2.1.1.2.0')
 
     valor = "N:" + str(total_input_traffic) + ':' + str(total_output_traffic)
     #print(valor)
-    
-    rrdtool.update('net3.rrd', valor)
-    rrdtool.dump('net3.rrd','net3.xml')
+
     time.sleep(1)
     appendFile = open('example.txt','a')
     if (i>0):
@@ -51,5 +47,3 @@ def animate(i):
         
 ani = animation.FuncAnimation(fig, animate, interval=10)
 plt.show()
-
-
