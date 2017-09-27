@@ -1,6 +1,6 @@
 import tkinter as tk
 
-class Principal(tk.Frame):
+class Agregar(tk.Frame):
 	def __init__(self, parent):
 		tk.Frame.__init__(self, parent)
 
@@ -27,5 +27,5 @@ class Principal(tk.Frame):
 		print('Ip: ' +  self.ip.get())
 		#llamar a funcion para agregar agente.
 root = tk.Tk()
-Principal(root).pack(fill="both", expand=False)
+Agregar(root).pack(fill="both", expand=False)
 root.mainloop()

@@ -23,4 +23,4 @@ def datos(comunidad, ip):
           print(' = '.join([x.prettyPrint() for x in varBind]))
       return varBinds
 
-datos("comunSNMP","localhost")
+datos("SNMPwindows","localhost")

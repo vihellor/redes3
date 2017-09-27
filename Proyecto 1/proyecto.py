@@ -10,7 +10,7 @@ comunidad = "comunSNMP"
 ip = "localhost"
 
 style.use('fivethirtyeight')
-<<<<<<< HEAD
+
 fig = plt.figure('name of variable')
 ax1 = fig.add_subplot(1,1,1)
 
@@ -48,7 +48,7 @@ def animate(i):
         
 ani = animation.FuncAnimation(fig, animate, interval=10)
 plt.show()
-=======
+
 fig = plt.figure()
 ax1 = fig.add_subplot(3,2,1)
 ax2 = fig.add_subplot(3,2,2)
@@ -132,4 +132,4 @@ def an():
 		i += 1
 		plt.show()
 an()
->>>>>>> 7dc55da4d6df35176e9f94776171fe8facd270ab
+
