@@ -1,4 +1,6 @@
 import tkinter as tk
+from datos import datos 
+from Agregar import Agregar
 
 class Proyecto(tk.Frame):
 	def __init__(self, parent):
@@ -21,9 +23,12 @@ class Proyecto(tk.Frame):
 		btnShow.pack(side='left')
 
 	def agregar(self):
-		index = self.lista.index()
-		print('index: ', index)
-		#self.lista.insert(1, 'Agente: SO  Ultimo reinicio...')
+		index = self.lista.size()
+		#detalles = destalles()
+		root1 = tk.Tk()
+		Agregar(root1).pack(fill="both", expand=False)
+		root1.mainloop()
+		self.lista.insert(index, '')
 
 	def eliminar(self):
 		try:

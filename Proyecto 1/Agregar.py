@@ -1,4 +1,5 @@
 import tkinter as tk
+from datos import datos
 
 class Agregar(tk.Frame):
 	def __init__(self, parent):
@@ -23,9 +24,9 @@ class Agregar(tk.Frame):
 		btnAgregar.pack(side="right")
 
 	def agregar(self):
-		print('Comunidad: ', self.comunidad.get())
-		print('Ip: ' +  self.ip.get())
+		info = datos(self.comunidad.get(), self.ip.get())
+		print(info)
+		return info
+		#self.destroy()
+    	#sys.exit()
 		#llamar a funcion para agregar agente.
-root = tk.Tk()
-Agregar(root).pack(fill="both", expand=False)
-root.mainloop()
