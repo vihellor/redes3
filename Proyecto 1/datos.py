@@ -1,4 +1,5 @@
 from pysnmp.hlapi import *
+
 def datos(comunidad, ip):
 	errorIndication, errorStatus, errorIndex, varBinds = next(
 		nextCmd(SnmpEngine(),
@@ -23,9 +24,6 @@ def datos(comunidad, ip):
 	else:
 		datos = '' 
 		for varBind in varBinds:
-			#print(' = '.join([x.prettyPrint() for x in varBind]))
 			data = str(varBind).split('=')
-			#print(data[1])
 			datos = datos + ' ' + data[1] 
-		#print(datos)
 		return datos

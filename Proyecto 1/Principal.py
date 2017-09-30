@@ -24,10 +24,10 @@ class Proyecto(tk.Frame):
 
 	def agregar(self):
 		index = self.lista.size()
-		#detalles = destalles()
 		root1 = tk.Tk()
-		Agregar(root1).pack(fill="both", expand=False)
+		detalles = Agregar(root1).pack(fill="both", expand=False)
 		root1.mainloop()
+		#print('detalles: ', detalles)
 		self.lista.insert(index, '')
 
 	def eliminar(self):
@@ -35,7 +35,6 @@ class Proyecto(tk.Frame):
 			index = self.lista.curselection()
 			self.lista.delete(index)
 		except ValueError: pass
-		
 
 	def ver(self):
 		print('Ip: ')
