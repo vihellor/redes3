@@ -6,13 +6,19 @@ from matplotlib import style
 from math import *
 import os
 
-comunidad = "comunSNMP"
-ip = "localhost"
+comunidad = ''
+ip = ''
 
 style.use('fivethirtyeight')
 
 fig = plt.figure('name of variable')
 ax1 = fig.add_subplot(1,1,1)
+
+def start(c, i):
+	comunidad = c
+	ip = i
+	an()
+
 
 def animate(i):
     total_input_traffic = int(
@@ -131,5 +137,4 @@ def an():
 		ani = animation.FuncAnimation(fig, animate, interval=100)
 		i += 1
 		plt.show()
-an()
 

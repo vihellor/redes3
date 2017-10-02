@@ -26,5 +26,4 @@ class Agregar(tk.Frame):
 	def agregar(self):
 		info = datos(self.comunidad.get(), self.ip.get())
 		print(info)
-		#return info
-		self.quit()
+		

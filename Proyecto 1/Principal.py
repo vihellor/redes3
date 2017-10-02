@@ -1,8 +1,14 @@
 import tkinter as tk
 from datos import datos 
 from Agregar import Agregar
+from proyecto import start
 
 class Proyecto(tk.Frame):
+	
+	global detalles
+	Comunidad = 'SNMPwindows'
+	Ip = 'localhost'
+
 	def __init__(self, parent):
 		tk.Frame.__init__(self, parent)
 		
@@ -25,10 +31,9 @@ class Proyecto(tk.Frame):
 	def agregar(self):
 		index = self.lista.size()
 		root1 = tk.Tk()
-		detalles = Agregar(root1).pack(fill="both", expand=False)
+		Agregar(root1).pack(fill="both", expand=False)
 		root1.mainloop()
-		#print('detalles: ', detalles)
-		self.lista.insert(index, '')
+		#Aqui van los datos del archivo datos :(
 
 	def eliminar(self):
 		try:
@@ -37,7 +42,8 @@ class Proyecto(tk.Frame):
 		except ValueError: pass
 
 	def ver(self):
-		print('Ip: ')
+		print()
+		#start(Comunidad, Ip)
 
 
 def main():
