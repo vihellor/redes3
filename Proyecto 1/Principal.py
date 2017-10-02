@@ -52,7 +52,7 @@ class Proyecto(tk.Frame):
 =======
 		print('Ip: ')
         vis = new Visual()
-        #Visual.an()  ##sólo falta agregar el 
+        #Visual.an()  ##sólo falta agregar la comunidad y el ip
     def datos(comunidad, ip):
 	    errorIndication, errorStatus, errorIndex, varBinds = next(
 		    nextCmd(SnmpEngine(),
