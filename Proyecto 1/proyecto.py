@@ -17,7 +17,7 @@ class Visual():
         ax5 = fig.add_subplot(3,2,5)
         plt.ion()
 
-<<<<<<< HEAD
+
 comunidad = ''
 ip = ''
 
@@ -149,7 +149,7 @@ def an():
 		ani = animation.FuncAnimation(fig, animate, interval=100)
 		i += 1
 		plt.show()
-=======
+
     def borrar():
 	    if os.path.exists("example.txt"):
 		    os.remove("example.txt")
@@ -216,7 +216,6 @@ def an():
 		    ax3.set_title('Interfaces ethernet')
 		    ax4.set_title('Diagramas UDP')
 		    ax5.set_title('Mensajes TCP')
->>>>>>> 3a0859532d7739836801bddc2b0999e79a7b5209
 
     def an(comunidad,ip): 
 	    borrar()
