@@ -1,7 +1,11 @@
 import tkinter as tk
 from datos import datos 
 from Agregar import Agregar
+<<<<<<< HEAD
 from proyecto import start
+=======
+from pysnmp.hlapi import *
+>>>>>>> 3a0859532d7739836801bddc2b0999e79a7b5209
 
 class Proyecto(tk.Frame):
 	
@@ -42,8 +46,41 @@ class Proyecto(tk.Frame):
 		except ValueError: pass
 
 	def ver(self):
+<<<<<<< HEAD
 		print()
 		#start(Comunidad, Ip)
+=======
+		print('Ip: ')
+        vis = new Visual()
+        #Visual.an()  ##sólo falta agregar el 
+    def datos(comunidad, ip):
+	    errorIndication, errorStatus, errorIndex, varBinds = next(
+		    nextCmd(SnmpEngine(),
+		    CommunityData(comunidad, mpModel=0),
+		    UdpTransportTarget((ip, 161)),
+		    ContextData(),
+		    ObjectType(ObjectIdentity('1.3.6.1.2.1.1.1.0')),
+		    ObjectType(ObjectIdentity('1.3.6.1.2.1.1.2.0')),
+		    ObjectType(ObjectIdentity('1.3.6.1.2.1.1.3.0')),
+		    ObjectType(ObjectIdentity('1.3.6.1.2.1.1.4.0')),
+		    ObjectType(ObjectIdentity('1.3.6.1.2.1.1.5.0')),
+		    ObjectType(ObjectIdentity('1.3.6.1.2.1.1.6.0'))))
+
+	    if errorIndication:
+		    print(errorIndication)
+		    return None
+
+	    elif errorStatus:
+		    print('%s at %s' % (errorStatus.prettyPrint(), errorIndex and varBinds[int(errorIndex) - 1][0] or '?'))
+		    return None
+		
+	    else:
+		    datos = '' 
+		    for varBind in varBinds:
+			    data = str(varBind).split('=')
+			    datos = datos + ' ' + data[1] 
+		    return datos
+>>>>>>> 3a0859532d7739836801bddc2b0999e79a7b5209
 
 
 def main():
