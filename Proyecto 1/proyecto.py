@@ -17,6 +17,7 @@ class Visual():
         ax5 = fig.add_subplot(3,2,5)
         plt.ion()
 
+<<<<<<< HEAD
 
 comunidad = ''
 ip = ''
@@ -150,6 +151,8 @@ def an():
 		i += 1
 		plt.show()
 
+=======
+>>>>>>> 40583e7c1838c189ed84cab5f0901e739a42fbde
     def borrar():
 	    if os.path.exists("example.txt"):
 		    os.remove("example.txt")

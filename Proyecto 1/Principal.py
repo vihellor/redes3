@@ -57,7 +57,6 @@ class Proyecto(tk.Frame):
 		print(datos[1], datos[3])
 		#manda llamar la funcion en proyecto .py con datos[1] datos[3]
 
-
 def main():
 	root = tk.Tk()
 	title = root.title('ESCOMservium')
