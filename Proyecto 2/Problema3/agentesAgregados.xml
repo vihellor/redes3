@@ -1,0 +1,14 @@
+<agentes>
+    <dispositivo name="Ubuntu">
+        <nombre>Ubuntu</nombre>
+        <version>1</version>
+        <comunidad>SNMPcom</comunidad>
+        <ip>30.30.30.30</ip>
+        <sistema-operativo>Ubuntu</sistema-operativo>
+        <ubicacion>Mexico</ubicacion>
+        <puertos>4234</puertos>
+        <actividad>Desde hace mucho</actividad>
+        <estado>UP</estado>
+        <puertos-disponibles>4521</puertos-disponibles>
+    </dispositivo>
+</agentes>
